@@ -97,7 +97,7 @@ the interaction*:
 
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
-
+The Ambient Orb is is a device that displays data through ambient color changes. It serves as an practical home/office decoration while also serving as a helpful information display for those to view. The core interaction someone would recognize this by is the periodical changing in lights. The light changes catches users attention, driving their curiosity on why the orb keeps changing colors. 
 
 ## Part A. Plan
 
