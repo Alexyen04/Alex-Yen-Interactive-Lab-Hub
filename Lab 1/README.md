@@ -84,10 +84,13 @@ drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
 - What inputs are available to the user? What responses does the work give?
+
   The User is able to configure and change what the ambient light represents and what kind of color correlates with what kind of data. For example, the Ambient Orb can represent the User's stock portfolio whether they are up/down on the day. The response the Ambient Orb gives is a visual color response, displaying color to Users about programmed data. 
 - Who is present, and how does the piece color the relationships between them?
-  The User is present for this object is the receiver of the visual changes. The relationship between the user and the object is that the object is just another form of a display for information, where the user can gain knowledge through the Ambient Orb as a form of light/color. 
+
+   The User is present for this object is the receiver of the visual changes. The relationship between the user and the object is that the object is just another form of a display for information, where the user can gain knowledge through the Ambient Orb as a form of light/color. 
 - What is the piece famous for? What are its strengths and its weaknesses?
+
    The Ambient Orb is famous for being a device that display data through the changing of color. Specifically, the Ambient Orb has been configured to monitor the NASDAQ, changing green when the price went up, red when the price went down, and amber colored when the price remained unchanged. The strength of this device is that it could easily and visually represent change in data, allowing User's to get a quick visual understanding of changes. However, a weakness was that User's who did not know what the Ambient Orb was representing would be confused and not understand the color change meaning. 
    
   Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
