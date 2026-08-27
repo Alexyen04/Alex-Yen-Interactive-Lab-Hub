@@ -117,6 +117,7 @@ For your masterwork, reconstruct the interaction as a scene:
   Corporate employees are working a 9-5 spending their time day trading stocks. In the top center of every office lies the Ambient Orb, where it displays flashing lights representing the changes in a certain stock. When the Ambient Orb flashes green, it indicates that the current stock being tracked is rising in price. When the Ambient Orb flashes red, it indicates that the current stock is dropping in price. These flashes of colors change every 5 mins and represent a large change, not just a minor percentage change. The Ambient Orb flashes orange when there is no significant change (defined as more than 3% change) in stock price since open. Employees will often look up to see if the Ambient Orb is displaying any meaningful change in stock prices. 
 - **Goals:** What is each player trying to do?
 
+  Each employee is trying to optimize and make the most amount of money in a day through day trading. By utilizing the Ambient Orb, they are better able to know when to sell/buy stocks. 
 **Describe your setting, players, activity, and goals here.**
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
@@ -138,10 +139,16 @@ it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
 
+On paper we wanted to have a light that was large enough for a large office to notice and see. When acted out, the light was not as bright and was more difficult to see because of the surrounding light. 
+
 **Did new ideas about the piece surface once you were on your feet?**
+
+Some other things we could have added to the piece was possible a sound/audio effect that pairs with the light change. Also a broader range of colors to better represent a change in the stock market, rather than just red, green and orange. 
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+
+When the light turns red, users may not necessarily sell the stock but be on alert to monitor and track the projection of the stock. 
 
 ## Part C. Prototype the Light (light first!)
 
@@ -189,6 +196,7 @@ the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
 **Include your video here.**
+https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view?usp=sharing
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
