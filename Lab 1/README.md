@@ -110,7 +110,11 @@ For your masterwork, reconstruct the interaction as a scene:
   This interaction happens in an office / corporate building setting during the typical work day (9-5). This office is a large spread out space, with many desks, computers and tables scattered throughout. 
 - **Players:** Who is involved? Who else is present? Think through everyone in
   the setting, not just the primary user.
+
+  For this scenario, the players directly involved will be the corporate employees. However, there will be other players present not directly involved including visitors and utility workers. 
 - **Activity:** What is happening between the players and the light?
+
+  Corporate employees are working a 9-5 spending their time day trading stocks. In the top center of every office lies the Ambient Orb, where it displays flashing lights representing the changes in a certain stock. When the Ambient Orb flashes green, it indicates that the current stock being tracked is rising in price. When the Ambient Orb flashes red, it indicates that the current stock is dropping in price. These flashes of colors change every 5 mins and represent a large change, not just a minor percentage change. The Ambient Orb flashes orange when there is no significant change (defined as more than 3% change) in stock price since open. 
 - **Goals:** What is each player trying to do?
 
 **Describe your setting, players, activity, and goals here.**
