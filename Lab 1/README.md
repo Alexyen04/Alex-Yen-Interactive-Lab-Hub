@@ -106,6 +106,8 @@ For your masterwork, reconstruct the interaction as a scene:
 
 - **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
   a spaceship corridor, a nightclub, a harbor at night)
+
+  This interaction happens in an office / corporate building setting during the typical work day (9-5). This office is a large spread out space, with many desks, computers and tables scattered throughout. 
 - **Players:** Who is involved? Who else is present? Think through everyone in
   the setting, not just the primary user.
 - **Activity:** What is happening between the players and the light?
