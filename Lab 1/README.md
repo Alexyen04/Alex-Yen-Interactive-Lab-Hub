@@ -204,8 +204,8 @@ who doesn't should come away understanding what it's famous for. How might you i
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
 
-
 Other actors (role - stock traders): Xiaoxi Xu, Sarah Rupani, Eric Chen.
+
 ---
 
 # Part 2 — ReMastering the light
