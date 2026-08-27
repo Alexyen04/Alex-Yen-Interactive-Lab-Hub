@@ -139,16 +139,16 @@ it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
 
-On paper we wanted to have a light that was large enough for a large office to notice and see. When acted out, the light was not as bright and was more difficult to see because of the surrounding light. 
+On paper we wanted to have a light that was large enough for a large office to notice and see. When acted out, the light was not as bright and was more difficult to see because of the surrounding light. For color changes, we also wanted to have a more gradual and fading change, then a sudden abrupt color change. 
 
 **Did new ideas about the piece surface once you were on your feet?**
 
-Some other things we could have added to the piece was possible a sound/audio effect that pairs with the light change. Also a broader range of colors to better represent a change in the stock market, rather than just red, green and orange. 
+Some other things we could have added to the piece was instead of still color, have a breathing flickering effect in the light. Also a broader range of colors to better represent a change in the stock market, rather than just red, green and orange. Having the option to change the brightness also makes the interaction for users better. We also realized that having the light represent a wider range of data would offer more flexibility for users.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
 
-When the light turns red, users may not necessarily sell the stock but be on alert to monitor and track the projection of the stock. 
+When the light turns red, users may not necessarily sell the stock but be on alert to monitor and track the projection of the stock. The Ambient Orb can also offer as a peace of mind rather than action driving interaction by representing other forms of data like weather or temperature. Instead of the color change causing the user make a physical reaction, the interaction could be more of a mental reaction where the user just acknowledges information being displayed by the Ambient Orb. 
 
 ## Part C. Prototype the Light (light first!)
 
@@ -174,6 +174,8 @@ building any real electronics. (Zoom works well for recording; you can pin the
 video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
+
+https://drive.google.com/file/d/1H__HwfftiRw2iAPpzK8p9TSeyaEoNhvs/view?usp=sharing
 
 ## Part E. (optional) Costume the Device
 
@@ -202,6 +204,8 @@ https://drive.google.com/file/d/1n9d_fjQq6e5xfY8tYnoIqkk-bbsrOhrN/view?usp=shari
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
 
+
+Other actors (role - stock traders): Xiaoxi Xu, Sarah Rupani, Eric Chen.
 ---
 
 # Part 2 — ReMastering the light
