@@ -237,7 +237,10 @@ Feedback Recieved:
 What I liked: Your video made a ton of sense! It looks like you used a smart lightbulb to represent the ambient 2002 device, which makes a lot of sense as the main object is just an orb of light! The interaction is clear as well, where it switched to blue, which influenced the person to grab an umbrella 
 What can be improved: the only thing I would do to improve the video would be more use cases to show that a person can program it. Cause right now I assume it only indicates weather.
 2. Aurora: 
-3. Shuning Liu:
+3. Shuning Liu: I liked how you placed the Ambient Orb in a shared office environment and clearly mapped each color to a change in stock performance. This made it easy to understand how employees could receive information with a quick glance without interrupting their work. I also found it interesting that visitors and other people in the office might see the same light but interpret it differently.
+One question I had was whether the flashing light might become distracting if it changes frequently in a workplace. I also wonder how someone unfamiliar with the color mapping, or someone who are rad-green color blind could understand the colors.
+I would suggest combining color with another visual quality, such as brightness, pulse speed, or flashing pattern. For example, a rising stock could produce a brighter or faster pulse, while a falling stock could become dimmer or pulse more slowly. This could make the information more accessible and understandable~.
+
 
 ## Remix, Update, or Critique the Master
 
