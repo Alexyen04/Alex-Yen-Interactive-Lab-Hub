@@ -227,10 +227,16 @@ wasn't clear.
 
 1. Viktor Radev: [Lab1](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
 2. Name: Lab1
-3. Name: Lab1
+3. Shuning Liu: [Lab1](https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 
 **Summarize the feedback you got from your partners here.**
 
+Feedback Recieved:
+1. Viktor Radev:
+2. Name: Feedback
+3. Name:
+
+Feed
 ## Remix, Update, or Critique the Master
 
 Now that you understand your masterwork from the inside, respond to it. Do the
