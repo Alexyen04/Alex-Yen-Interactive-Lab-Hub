@@ -225,9 +225,9 @@ wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 
-Viktor Radev: [Lab1](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md). 
-Name: Lab1. 
-Name: Lab1. 
+1. Viktor Radev: [Lab1](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
+2. Name: Lab1
+3. Name: Lab1
 
 **Summarize the feedback you got from your partners here.**
 
