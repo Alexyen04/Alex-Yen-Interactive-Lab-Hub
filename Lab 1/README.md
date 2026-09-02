@@ -224,19 +224,18 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
-
+Feedback Given:
 1. Viktor Radev: [Lab1](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
-2. Name: Lab1
+2. Aurora: [Lab1](https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 3. Shuning Liu: [Lab1](https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
 
 **Summarize the feedback you got from your partners here.**
 
 Feedback Recieved:
 1. Viktor Radev:
-2. Name: Feedback
-3. Name:
+2. Aurora: Feedback
+3. Shuning Liu:
 
-Feed
 ## Remix, Update, or Critique the Master
 
 Now that you understand your masterwork from the inside, respond to it. Do the
