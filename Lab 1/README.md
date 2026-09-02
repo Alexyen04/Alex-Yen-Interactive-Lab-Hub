@@ -233,8 +233,10 @@ Feedback Given:
 **Summarize the feedback you got from your partners here.**
 
 Feedback Recieved:
-1. Viktor Radev:
-2. Aurora: Feedback
+1. Viktor Radev: What I understood: I understand that the Ambient Light 2002 is something anyone can program to indicate that something is happening in the world. Stock price indicator, weather/temp indicator, and more! 
+What I liked: Your video made a ton of sense! It looks like you used a smart lightbulb to represent the ambient 2002 device, which makes a lot of sense as the main object is just an orb of light! The interaction is clear as well, where it switched to blue, which influenced the person to grab an umbrella 
+What can be improved: the only thing I would do to improve the video would be more use cases to show that a person can program it. Cause right now I assume it only indicates weather.
+2. Aurora: 
 3. Shuning Liu:
 
 ## Remix, Update, or Critique the Master
