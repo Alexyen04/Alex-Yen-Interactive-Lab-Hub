@@ -224,6 +224,7 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
+
 Feedback Given:
 1. Viktor Radev: [Lab1](https://github.com/LaboriouslyExquisite/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
 2. Aurora: [Lab1](https://github.com/aurorajxshen/Interactive-Lab-Hub/tree/Fall2026/Lab%201)
