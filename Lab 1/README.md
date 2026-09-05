@@ -325,6 +325,7 @@ Another idea for the interaction would be a paired interaction with another user
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
 
+Instead of having the user going for an intensive excercise, we could have portrayed the user just going outside to do any activities which also include walking and getting steps. 
 
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
