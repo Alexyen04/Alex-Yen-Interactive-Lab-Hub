@@ -327,6 +327,8 @@ Instead of having the user going for an intensive excercise, we could have portr
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
+<img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
+
 ---
 
 
