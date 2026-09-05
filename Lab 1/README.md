@@ -254,14 +254,18 @@ combine them):
    vibration, sound, motion, heat — whatever best carries the interaction. Feel
    free to fork and modify the Tinkerbelle code. (Add your updates to this lab's folder!)
 
+   We decided to keep the interaction to just be a light due to the Masterwork's true meaning. We believe that the Ambient Orb's interaction is supposed to be something in the background and more of a peripheral interaction with minimal attention. Adding more sensory cues would change this interaction and causing the Ambient Orb to draw too much sensory attention. Therefore, we decided to keep the interaction to just be a visual light.
    
 3. **Update it.** Redesign the piece for today's context, or for a setting its
    creators never imagined (the piece with roommates in the room, with children
    present, on a phone, in a car).
 
+   Our new design for the Ambient Orb is the Ambient Band. The Ambient Band is a device that users can wear on there wrists to display meaningful data. A common use that we propose is for the Ambient Band to display / represent a step goal for a day. 
    
 5. **Fix its weaknesses.** You identified this master's strengths and weaknesses
    in Part 0 — now address a weakness, or push a strength further.
+
+   A previous weakness of the Ambient Orb was that it had to be in a specific place for the user to interact with it. The Ambient Orb displays data relevant throughout the whole day, so this limitation makes it difficult for users to interact with the Ambient Orb at all times of day in different places. As a result, we decided to make the Ambient Orb a portable device: Ambient Band. This removes the weakness the Ambient Orb previously had and allows users to bring allow the Ambient Band and interact with it whenever and wherever they want. 
 
 We will grade this second pass with an emphasis on **creativity** and on how well
 your response engages with what your master was really doing.
