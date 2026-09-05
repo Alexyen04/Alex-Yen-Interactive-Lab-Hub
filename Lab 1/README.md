@@ -316,9 +316,11 @@ it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
 
+We wanted the light interaction between the user and the Ambient Band to be a very subtle unforced reaction. It was more difficult to have this be the case during the video. 
 
 **Did new ideas about the piece surface once you were on your feet?**
 
+Another idea for the interaction would be a paired interaction with another user. Two users could have synchronized wristbands and at the end of the day, the person who walked the most steps would show green. This interaction also involves user to user interaction. 
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
