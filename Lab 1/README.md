@@ -299,6 +299,8 @@ don't need to be beautiful, but they must capture and communicate not only the b
 and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
+<img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
+
 **Include pictures of your storyboards here.**
 
 Use the storyboards to decide what interaction to prototype.
@@ -327,7 +329,7 @@ Instead of having the user going for an intensive excercise, we could have portr
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
-<img width="2100" height="1574" alt="image" src="https://github.com/user-attachments/assets/57de15aa-ab7b-4ddf-b867-761a01aa137c" />
+
 
 ---
 
