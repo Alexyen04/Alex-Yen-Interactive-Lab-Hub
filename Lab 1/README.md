@@ -253,14 +253,72 @@ combine them):
 1. **Remix the modality.** Your recreation no longer has to (just) use light. Use
    vibration, sound, motion, heat — whatever best carries the interaction. Feel
    free to fork and modify the Tinkerbelle code. (Add your updates to this lab's folder!)
-2. **Update it.** Redesign the piece for today's context, or for a setting its
+
+   
+3. **Update it.** Redesign the piece for today's context, or for a setting its
    creators never imagined (the piece with roommates in the room, with children
    present, on a phone, in a car).
-3. **Fix its weaknesses.** You identified this master's strengths and weaknesses
+
+   
+5. **Fix its weaknesses.** You identified this master's strengths and weaknesses
    in Part 0 — now address a weakness, or push a strength further.
 
 We will grade this second pass with an emphasis on **creativity** and on how well
 your response engages with what your master was really doing.
+
+## Part A. Plan
+
+For your masterwork, reconstruct the interaction as a scene:
+
+- **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
+  a spaceship corridor, a nightclub, a harbor at night)
+
+  The interaction of the Ambient Band interaction would take place in any daily lifestyle activity for users. This could include a day in the office, home, school, going outdoors etc. The interaction happens when the user looks at his wrist to see if he met the daily step goals, this could be at the beginning of the day, afternoon, and at night.
+
+- **Players:** Who is involved? Who else is present? Think through everyone in
+  the setting, not just the primary user.
+
+  The primary users for this interaction is just the user wearing the Ambient Band. However, other users that could be involved at any spectators in the surrounding area that could be curious on what the purpose of the Ambient Band is. 
+
+- **Activity:** What is happening between the players and the light?
+
+  When the player starts his day (morning) the Ambient Band will show a red light indicating the player has not reached his desired steps for the day. As he progresses through out the day, the Ambient Band will slowly change colors and move from red to yellow to green as the player gets more and more steps. When the player reaches their desired step goal, the Ambient Band will display a green light.
+
+- **Goals:** What is each player trying to do?
+
+  Each player who interacts with the Ambient Band is trying to reach their step goal for the day and change the light from red to green. 
+
+**Describe your setting, players, activity, and goals here.**
+
+Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
+don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
+and the people around it. If you're new to storyboarding, read
+[this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
+
+**Include pictures of your storyboards here.**
+
+Use the storyboards to decide what interaction to prototype.
+
+<img width="2319" height="1426" alt="image" src="https://github.com/user-attachments/assets/ecc464e5-604a-42c2-b936-cf8d77fbecfd" />
+<img width="2884" height="1146" alt="image" src="https://github.com/user-attachments/assets/34e02756-8b2e-4e31-ad65-a11b8012ba3b" />
+
+**Summarize the feedback you got here.**
+
+## Part B. Act out the Interaction
+
+Physically act out the interaction you planned. For now, just pretend the light
+is doing what you've scripted — a person can wave a flashlight, or you can narrate
+it aloud.
+
+**Are there things that seemed better on paper than when acted out?**
+
+
+**Did new ideas about the piece surface once you were on your feet?**
+
+
+**Are there key moments in the interaction where things could go in a different direction?**
+Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+
 
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
