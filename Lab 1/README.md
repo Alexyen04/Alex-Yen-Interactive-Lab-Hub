@@ -329,6 +329,9 @@ Instead of having the user going for an intensive excercise, we could have portr
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
+[Ambient Band Video](https://drive.google.com/file/d/1p64lQtE5muzTrbsL11CxS_Trt-42TeAg/view?usp=sharing)
+
+
 
 
 ---
