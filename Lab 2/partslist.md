@@ -12,15 +12,15 @@
 
 1/1 x [Adafruit Mini PiTFT](https://www.adafruit.com/product/4393)
 
-1 x [Adafruit I2C Stemma QT Rotary Encoder Breakout with Encoder - STEMMA QT / Qwiic](https://www.adafruit.com/product/5880)
+0/1 x [Adafruit I2C Stemma QT Rotary Encoder Breakout with Encoder - STEMMA QT / Qwiic](https://www.adafruit.com/product/5880)
 
-1 x [Adafruit APDS9960 QT Proximity, Light, RBG, Gesture Sensor](https://www.adafruit.com/product/3595)
+1/1 x [Adafruit APDS9960 QT Proximity, Light, RBG, Gesture Sensor](https://www.adafruit.com/product/3595)
 
-1 x [Adafruit 6-DoF Accel + Gyro IMU LSM6DS3TR-C](https://www.adafruit.com/product/4503)
+1/1 x [Adafruit 6-DoF Accel + Gyro IMU LSM6DS3TR-C](https://www.adafruit.com/product/4503)
 
 1 x [Adafruit PCF8574 I2C GPIO Expander Breakout - STEMMA QT / Qwiic](https://www.adafruit.com/product/5545)
 
-1 x [Adafruit MPR121 12-Key Capacitive Touch Sensor Gator Breakout - STEMMA QT / Qwiic](https://www.adafruit.com/product/4830)
+1/1 x [Adafruit MPR121 12-Key Capacitive Touch Sensor Gator Breakout - STEMMA QT / Qwiic](https://www.adafruit.com/product/4830)
 
 1 x [Breadboard](https://www.adafruit.com/product/4539)
 
