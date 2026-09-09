@@ -2,15 +2,15 @@
 
 ## Parts in the kit by Wednesday class Sep. 9th
 
-1 x [Raspberry Pi 5 Model B/8GB](https://www.raspberrypi.com/products/raspberry-pi-5/)
+1/1 x [Raspberry Pi 5 Model B/8GB](https://www.raspberrypi.com/products/raspberry-pi-5/) 
 
-1 x [Rasberry Pi Power Supply](https://www.raspberrypi.com/products/27w-power-supply/)
+1/1 x [Rasberry Pi Power Supply](https://www.raspberrypi.com/products/27w-power-supply/)
 
-1 x [64 GB MicroSD Card](https://www.raspberrypi.com/products/sd-cards/)
+0/1 x [64 GB MicroSD Card](https://www.raspberrypi.com/products/sd-cards/)
 
-1 x [USB Type C microSD Card Reader/Writer](https://www.adafruit.com/product/5212)
+1/1 x [USB Type C microSD Card Reader/Writer](https://www.adafruit.com/product/5212)
 
-1 x [Adafruit Mini PiTFT](https://www.adafruit.com/product/4393)
+1/1 x [Adafruit Mini PiTFT](https://www.adafruit.com/product/4393)
 
 1 x [Adafruit I2C Stemma QT Rotary Encoder Breakout with Encoder - STEMMA QT / Qwiic](https://www.adafruit.com/product/5880)
 
