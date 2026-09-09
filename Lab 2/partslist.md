@@ -30,7 +30,7 @@
 
 1 x [9G Servo](https://www.digikey.com/en/products/detail/dfrobot/SER0048)
 
-1 x [SparkFun Servo pHAT for Raspberry Pi](https://www.sparkfun.com/sparkfun-servo-phat-for-raspberry-pi.html)
+1/1 x [SparkFun Servo pHAT for Raspberry Pi](https://www.sparkfun.com/sparkfun-servo-phat-for-raspberry-pi.html)
 
 1 x [Micro HDMI Cable - 3ft](https://www.sparkfun.com/micro-hdmi-cable-3ft.html)
 
@@ -40,7 +40,7 @@
 
 1/1 x [SparkFun Qwiic Button - Green LED](https://www.sparkfun.com/products/16842)
 
-1 x [SparkFun Qwiic Cable Kit](https://www.sparkfun.com/sparkfun-qwiic-cable-kit.html)
+1/1 x [SparkFun Qwiic Cable Kit](https://www.sparkfun.com/sparkfun-qwiic-cable-kit.html)
 
 1 x Bluetooth wireless speaker w/ microphone
 
