@@ -36,9 +36,9 @@
 
 1 x [SparkFun Qwiic SHIM](https://www.sparkfun.com/products/15794)
 
-1 x [SparkFun Qwiic Button - Red LED](https://www.sparkfun.com/products/15932)
+1/1 x [SparkFun Qwiic Button - Red LED](https://www.sparkfun.com/products/15932)
 
-1 x [SparkFun Qwiic Button - Green LED](https://www.sparkfun.com/products/16842)
+1/1 x [SparkFun Qwiic Button - Green LED](https://www.sparkfun.com/products/16842)
 
 1 x [SparkFun Qwiic Cable Kit](https://www.sparkfun.com/sparkfun-qwiic-cable-kit.html)
 
