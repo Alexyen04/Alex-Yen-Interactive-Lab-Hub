@@ -220,9 +220,9 @@ We also want the user to be able to check the exact time when needed, so we are 
 <img width="3955" height="2342" alt="image" src="https://github.com/user-attachments/assets/bdfc4a80-3eb5-45ca-a0d3-7739608414fb" />
 
 
-**Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+**Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)** 
 
-Amy Gao: 
+Amy Gao: https://github.com/zg375/Interactive-Lab-Hub/tree/e5b31b7391770d931069e1e1820313963bf86b4f/Lab%202
 Feedback:
 
 Sina Liu: https://github.com/SinaL0123/Interactive-Lab-Hub/tree/Fall2026/Lab%202
