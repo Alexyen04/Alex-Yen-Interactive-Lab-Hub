@@ -202,6 +202,22 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
+Our first idea was to create an hourglass clock, but we felt that it was a little too simple, so we decided to make the representation of time more personal. Since arriving in New York City, we have really enjoyed watching the sunsets, especially with the city skyline in the background. That inspired us to create a Sun and Moon Clock based on the way the sky changes throughout the day.
+
+This clock represents the passage of time using the movement of the sun and moon across the screen. During the day, the sun starts near the bottom-left of the display, gradually rises upward until it reaches the middle of the sky around midday, and then moves down toward the bottom-right to represent sunset.
+At night, the sun is replaced by the moon, which follows a similar path across the screen until the next morning, when the cycle begins again. The NYC skyline remains at the bottom of the display while the sky changes throughout the day and night. This creates a continuous visual representation of time that allows the user to understand roughly what part of the day they are in without having to read the exact time. 
+
+We also want the user to be able to check the exact time when needed, so we are thinking of an additional feature: by pressing one of the buttons on the Raspberry Pi, the display would temporarily switch from the Sun and Moon visualization to the current time. After a few seconds, it would return to the visual clock. This keeps the main experience more expressive while still allowing the clock to function as a practical timekeeping device.
+
+### Storyboard
+1. **Dawn**: Sun rises from the bottom-left. The city begins to wake up.
+2. **Morning**: The sun climbs higher along its arc in a brightening sky.
+3. **Midday**: The sun reaches its highest point, showing the middle of the day.
+4. **Sunset**: The sun descends toward the bottom-right as the sky turns orange.
+5. **Dusk**: The sun disappears and the moon begins its path across the sky.
+6. **Night**: The moon is high in the dark sky above the illuminated city. The cycle repeats
+
+<img width="3955" height="2342" alt="image" src="https://github.com/user-attachments/assets/bdfc4a80-3eb5-45ca-a0d3-7739608414fb" />
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
