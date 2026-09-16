@@ -6,6 +6,9 @@ from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from time import strftime, sleep
 
+from button_controls import button_a_pressed, button_b_pressed, create_time_screen, create_weather_screen
+from weather import get_current_temperature
+
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.D5) 
 dc_pin = digitalio.DigitalInOut(board.D25)
@@ -67,10 +70,41 @@ while True:
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
     y = top
-    curr_time = strftime("%m/%d/%Y %H:%M:%S")
+    # curr_time = strftime("%m/%d/%Y %H:%M:%S")
 
-    draw.text((x,y), curr_time, font=font, fill="#FFFFFF")
+    # draw.text((x,y), curr_time, font=font, fill="#FFFFFF")
     
-    # Display image.
-    disp.image(image, rotation)
-    time.sleep(1)
+
+    while True:
+        if button_a_pressed():
+            frame = create_time_screen(width, height)
+        elif button_b_pressed():
+            temperature = get_current_temperature()
+            frame = create_weather_screen(width, height, temperature)
+        else:
+            frame = Image.new(
+                "RGB",
+                (width, height),
+                (100, 150, 220)
+            )
+
+        disp.image(frame, rotation)
+        time.sleep(0.05)
+
+    # images = [
+    #     "images/dawn.png",
+    #     "images/morning.png",
+    #     "images/midday.png",
+    #     "images/afternoon.png",
+    #     "images/dusk.png",
+    #     "images/night.png",
+    # ]
+
+    # while True:
+    #     for image in images:
+    #         test_image = Image.open(image).convert("RGB")
+    #         test_image = test_image.resize((240,135))
+
+    #         # Display image.
+    #         disp.image(test_image, rotation)
+    #         time.sleep(2)
