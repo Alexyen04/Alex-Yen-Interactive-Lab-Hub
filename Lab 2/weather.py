@@ -1,23 +1,25 @@
 import requests
+import os
 # pip install requests
 
-LATITUDE = 40.7128
-LONGITUDE = -74.0060
+API_KEY = os.environ.get("WEATHERAPI_KEY")
+LOCATION = "New York"
 
-def get_current_temperature():
-    url = (
-        "https://api.open-meteo.com/v1/forecast"
-        f"?latitude={LATITUDE}"
-        f"&longitude={LONGITUDE}"
-        "&current=temperature_2m"
-        "&temperature_unit=fahrenheit"
-    )
+def get_current_weather():
+    url = "https://api.weatherapi.com/v1/current.json"
 
-    response = requests.get(url, timeout=5)
+    params = {
+        "key": API_KEY,
+        "q": LOCATION,
+        "aqi": "no"
+    }
+
+    response = requests.get(url, params=params, timeout=5)
     response.raise_for_status()
 
     data = response.json()
 
-    temperature = data["current"]["temperature_2m"]
+    temperature = round(data["current"]["temp_f"])
+    condition_code = data["current"]["condition"]["code"]
 
-    return round(temperature)
+    return temperature, condition_code
