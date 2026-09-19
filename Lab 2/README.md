@@ -257,7 +257,8 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
-![Uploading image.png…]()
+<img width="496" height="645" alt="image" src="https://github.com/user-attachments/assets/63ba4b49-dc13-4e80-9d28-7d6f4b09ed26" />
+
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
