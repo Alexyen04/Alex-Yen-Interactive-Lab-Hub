@@ -2,73 +2,24 @@
 # SPDX-License-Identifier: MIT
 
 """
-Be sure to check the learn guides for more usage information.
+NYC skyline clock.
 
-This example is for use on (Linux) computers that are using CPython with
-Adafruit Blinka to support CircuitPython libraries. CircuitPython does
-not support PIL/pillow (python imaging library)!
+Renders a day/night NYC skyline with the sun (7am-7pm) or moon (7pm-6am)
+following an hourly arc across the screen.
 
-Author(s): Melissa LeBlanc-Williams for Adafruit Industries
+The NYCClock class is usable from another script, e.g. screen_clock.py:
+
+    clock = NYCClock(width, height)
+    frame = clock.frame()   # RGB Image sized (width, height)
+    disp.image(frame, rotation)
+
+Running this file directly (`python3 nyc_clock.py`) sets up its own display
+and loops forever.
 """
 
-import digitalio
-import board
-from PIL import Image, ImageDraw
 import math
-import adafruit_rgb_display.ili9341 as ili9341
-import adafruit_rgb_display.st7789 as st7789  # pylint: disable=unused-import
-import adafruit_rgb_display.hx8357 as hx8357  # pylint: disable=unused-import
-import adafruit_rgb_display.st7735 as st7735  # pylint: disable=unused-import
-import adafruit_rgb_display.ssd1351 as ssd1351  # pylint: disable=unused-import
-import adafruit_rgb_display.ssd1331 as ssd1331  # pylint: disable=unused-import
-from time import sleep
 from datetime import datetime
-
-# Configuration for CS and DC pins (these are PiTFT defaults):
-cs_pin = digitalio.DigitalInOut(board.D5)
-dc_pin = digitalio.DigitalInOut(board.D25)
-reset_pin = digitalio.DigitalInOut(board.D24)
-
-# Config for display baudrate (default max is 24mhz):
-BAUDRATE = 24000000
-
-# Setup SPI bus using hardware SPI:
-spi = board.SPI()
-
-# pylint: disable=line-too-long
-# Create the display:
-# disp = st7789.ST7789(spi, rotation=90,                            # 2.0" ST7789
-# disp = st7789.ST7789(spi, height=240, y_offset=80, rotation=180,  # 1.3", 1.54" ST7789
-# disp = st7789.ST7789(spi, rotation=90, width=135, height=240, x_offset=53, y_offset=40, # 1.14" ST7789
-# disp = hx8357.HX8357(spi, rotation=180,                           # 3.5" HX8357
-# disp = st7735.ST7735R(spi, rotation=90,                           # 1.8" ST7735R
-# disp = st7735.ST7735R(spi, rotation=270, height=128, x_offset=2, y_offset=3,   # 1.44" ST7735R
-# disp = st7735.ST7735R(spi, rotation=90, bgr=True,                 # 0.96" MiniTFT ST7735R
-# disp = ssd1351.SSD1351(spi, rotation=180,                         # 1.5" SSD1351
-# disp = ssd1351.SSD1351(spi, height=96, y_offset=32, rotation=180, # 1.27" SSD1351
-# disp = ssd1331.SSD1331(spi, rotation=180,                         # 0.96" SSD1331
-disp = st7789.ST7789(
-    spi,
-    cs=cs_pin,
-    dc=dc_pin,
-    rst=reset_pin,
-    baudrate=BAUDRATE,
-    width=135,
-    height=240,
-    x_offset=53,
-    y_offset=40,
-    rotation=90
-)
-# pylint: enable=line-too-long
-
-# Create blank image for drawing.
-# Make sure to create image with mode 'RGB' for full color.
-if disp.rotation % 180 == 90:
-    height = disp.width  # we swap height/width to rotate it to landscape!
-    width = disp.height
-else:
-    width = disp.width  # we swap height/width to rotate it to landscape!
-    height = disp.height
+from PIL import Image
 
 DAY_BG = "images/daytimeNYCskyline.jpeg"
 NIGHT_BG = "images/nighttimeNYCskyline.jpeg"
@@ -82,19 +33,8 @@ LUNAR_START_HOUR = 19   # moon rises (leftmost) when night falls at 7pm
 LUNAR_END_HOUR = 6      # moon sets (rightmost) at 6am
 
 
-def load_background(input):
-    image = Image.new("RGB", (width, height))
-
-    # Get drawing object to draw on image.
-    draw = ImageDraw.Draw(image)
-
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-
-    image = Image.open(input)
-    backlight = digitalio.DigitalInOut(board.D22)
-    backlight.switch_to_output()
-    backlight.value = True
+def load_background(path, width, height):
+    image = Image.open(path)
 
     # Scale the image to the smaller screen dimension
     image_ratio = image.width / image.height
@@ -121,53 +61,100 @@ def load_sprite(path, target_width):
     return image.resize((target_width, scaled_height), Image.BICUBIC)
 
 
-def sprite_position(t, sprite):
-    # t travels 0 (left, mid-height) -> 0.5 (center, top) -> 1 (right, mid-height)
-    sw, sh = sprite.size
-    left = 0  # centered on the left edge, half the sprite cut off
-    right = width  # centered on the right edge, half the sprite cut off
-    mid = height // 2  # start/end at the vertical middle of the picture
-    amp = (height - sh) // 2  # arc top stays just on screen
-    x = left + t * (right - left)
-    y = mid - math.sin(math.pi * t) * amp
-    return int(x), int(y)
+class NYCClock:
+    """Renders a day/night NYC skyline frame for a (width, height) screen."""
+
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.day_bg = load_background(DAY_BG, width, height)
+        self.night_bg = load_background(NIGHT_BG, width, height)
+        self.sun_sprite = load_sprite(SUN_SPRITE, SPRITE_WIDTH)
+        self.moon_sprite = load_sprite(MOON_SPRITE, SPRITE_WIDTH)
+
+    def _sprite_position(self, t, sprite):
+        # t travels 0 (left, mid-height) -> 0.5 (center, top) -> 1 (right, mid-height)
+        sh = sprite.height
+        mid = self.height // 2  # start/end at the vertical middle of the picture
+        amp = (self.height - sh) // 2  # arc top stays just on screen
+        x = t * self.width  # centered on the left edge to centered on the right edge
+        y = mid - math.sin(math.pi * t) * amp
+        return int(x), int(y)
+
+    def _paste_sprite(self, frame, sprite, cx, cy):
+        sw, sh = sprite.size
+        x = int(cx - sw / 2)
+        y = int(cy - sh / 2)
+        frame.paste(sprite, (x, y), sprite)
+
+    def frame(self, hour=None):
+        """Return an RGB Image of the skyline for `hour` (default: current hour)."""
+        if hour is None:
+            hour = datetime.now().hour
+
+        if SOLAR_START_HOUR <= hour < SOLAR_END_HOUR:
+            # Daytime sky with the sun, one step per hour from 7am-7pm.
+            frame = self.day_bg.copy()
+            t = (hour - SOLAR_START_HOUR) / (SOLAR_END_HOUR - SOLAR_START_HOUR)
+            self._paste_sprite(
+                frame, self.sun_sprite, *self._sprite_position(t, self.sun_sprite)
+            )
+        else:
+            # Nighttime sky with the moon, one step per hour from 7pm-6am.
+            frame = self.night_bg.copy()
+            if hour >= LUNAR_START_HOUR or hour <= LUNAR_END_HOUR:
+                p = (hour - LUNAR_START_HOUR) % 24
+                t = p / ((LUNAR_END_HOUR - LUNAR_START_HOUR) % 24)
+                self._paste_sprite(
+                    frame, self.moon_sprite, *self._sprite_position(t, self.moon_sprite)
+                )
+
+        return frame
 
 
-def paste_sprite(frame, sprite, cx, cy):
-    sw, sh = sprite.size
-    x = int(cx - sw / 2)
-    y = int(cy - sh / 2)
-    frame.paste(sprite, (x, y), sprite)
+if __name__ == "__main__":
+    import digitalio
+    import board
+    import adafruit_rgb_display.st7789 as st7789
+    from time import sleep
 
+    # Configuration for CS and DC pins (these are PiTFT defaults):
+    cs_pin = digitalio.DigitalInOut(board.D5)
+    dc_pin = digitalio.DigitalInOut(board.D25)
+    reset_pin = digitalio.DigitalInOut(board.D24)
 
-day_bg = load_background(DAY_BG)
-night_bg = load_background(NIGHT_BG)
-sun_sprite = load_sprite(SUN_SPRITE, SPRITE_WIDTH)
-moon_sprite = load_sprite(MOON_SPRITE, SPRITE_WIDTH)
+    # Config for display baudrate (default max is 24mhz):
+    BAUDRATE = 24000000
 
-temp_time = 7
-# Display image.
-while True:
-    # if temp_time == 25:
-    #     temp_time = 1
-    # else:
-    #     temp_time += 1
-    # hour = temp_time
-    
-    hour = datetime.now().hour
+    # Setup SPI bus using hardware SPI:
+    spi = board.SPI()
 
-    if SOLAR_START_HOUR <= hour < SOLAR_END_HOUR:
-        # Daytime sky with the sun, one step per hour from 7am-7pm.
-        frame = day_bg.copy()
-        t = (hour - SOLAR_START_HOUR) / (SOLAR_END_HOUR - SOLAR_START_HOUR)
-        paste_sprite(frame, sun_sprite, *sprite_position(t, sun_sprite))
+    disp = st7789.ST7789(
+        spi,
+        cs=cs_pin,
+        dc=dc_pin,
+        rst=reset_pin,
+        baudrate=BAUDRATE,
+        width=135,
+        height=240,
+        x_offset=53,
+        y_offset=40,
+        rotation=90,
+    )
+
+    # Make sure to create image with mode 'RGB' for full color.
+    if disp.rotation % 180 == 90:
+        height = disp.width  # we swap height/width to rotate it to landscape!
+        width = disp.height
     else:
-        # Nighttime sky with the moon, one step per hour from 7pm-6am.
-        frame = night_bg.copy()
-        if hour >= LUNAR_START_HOUR or hour <= LUNAR_END_HOUR:
-            p = (hour - LUNAR_START_HOUR) % 24
-            t = p / ((LUNAR_END_HOUR - LUNAR_START_HOUR) % 24)
-            paste_sprite(frame, moon_sprite, *sprite_position(t, moon_sprite))
+        width = disp.width  # we swap height/width to rotate it to landscape!
+        height = disp.height
 
-    disp.image(frame)
-    sleep(1)
+    backlight = digitalio.DigitalInOut(board.D22)
+    backlight.switch_to_output()
+    backlight.value = True
+
+    clock = NYCClock(width, height)
+    while True:
+        disp.image(clock.frame())
+        sleep(1)
