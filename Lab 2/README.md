@@ -276,6 +276,7 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
 
+We utilized gemini to help generate a Verplank diagram for better visual explanation.
 
 <img width="1024" height="623" alt="image" src="https://github.com/user-attachments/assets/c9986f93-bd32-487c-8c7e-deeb2450a968" />
 
