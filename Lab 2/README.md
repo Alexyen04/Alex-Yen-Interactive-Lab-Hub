@@ -257,7 +257,7 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
-
+![Uploading image.png…]()
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -274,6 +274,9 @@ After that, Git will ask you to login to your GitHub account to push the updates
 Do take advantage of having done the previous iteration to refine and simplify your design.
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
+
+
+<img width="1024" height="623" alt="image" src="https://github.com/user-attachments/assets/c9986f93-bd32-487c-8c7e-deeb2450a968" />
 
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
