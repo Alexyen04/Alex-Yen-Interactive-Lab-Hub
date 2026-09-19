@@ -64,47 +64,51 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-while True:
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=400)
 
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
-    y = top
-    # curr_time = strftime("%m/%d/%Y %H:%M:%S")
+# MY PART 2
+# while True:
+#     # Draw a black filled box to clear the image.
+#     draw.rectangle((0, 0, width, height), outline=0, fill=400)
 
-    # draw.text((x,y), curr_time, font=font, fill="#FFFFFF")
+#     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    
+#  
+#     # y = top
+#     # curr_time = strftime("%m/%d/%Y %H:%M:%S")
+
+#     # draw.text((x,y), curr_time, font=font, fill="#FFFFFF")
     
 
-    while True:
-        if button_a_pressed():
-            frame = create_time_screen(width, height)
-        elif button_b_pressed():
-            temperature = get_current_temperature()
-            frame = create_weather_screen(width, height, temperature)
-        else:
-            frame = Image.new(
-                "RGB",
-                (width, height),
-                (100, 150, 220)
-            )
+while True:
+    if button_a_pressed():
+        frame = create_time_screen(width, height)
+    elif button_b_pressed():
+        temperature = get_current_temperature()
+        frame = create_weather_screen(width, height, temperature)
+    else:
+        frame = Image.new(
+            "RGB",
+            (width, height),
+            (100, 150, 220)
+        )
 
-        disp.image(frame, rotation)
-        time.sleep(0.05)
+    disp.image(frame, rotation)
+    time.sleep(0.05)
 
-    # images = [
-    #     "images/dawn.png",
-    #     "images/morning.png",
-    #     "images/midday.png",
-    #     "images/afternoon.png",
-    #     "images/dusk.png",
-    #     "images/night.png",
-    # ]
+# images = [
+#     "images/dawn.png",
+#     "images/morning.png",
+#     "images/midday.png",
+#     "images/afternoon.png",
+#     "images/dusk.png",
+#     "images/night.png",
+# ]
 
-    # while True:
-    #     for image in images:
-    #         test_image = Image.open(image).convert("RGB")
-    #         test_image = test_image.resize((240,135))
+# while True:
+#     for image in images:
+#         test_image = Image.open(image).convert("RGB")
+#         test_image = test_image.resize((240,135))
 
-    #         # Display image.
-    #         disp.image(test_image, rotation)
-    #         time.sleep(2)
+#         # Display image.
+#         disp.image(test_image, rotation)
+#         time.sleep(2)
