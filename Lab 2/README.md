@@ -257,6 +257,10 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
+This is a video of our barely modified PiClock. At this stage, the display had a black background with a simple “Weather” label and a fixed temperature value, since we had not yet implemented the Weather API. Later, we changed the background to white so that it matched the weather icons better. We also replaced the fixed temperature with real-time weather information retrieved from the WeatherAPI service (https://www.weatherapi.com/)
+
+https://drive.google.com/file/d/1NtzD44-0iaYGWbAIoqBGaINFnMogyse4/view?usp=sharing
+
 <img width="496" height="645" alt="image" src="https://github.com/user-attachments/assets/63ba4b49-dc13-4e80-9d28-7d6f4b09ed26" />
 
 
