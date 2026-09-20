@@ -291,6 +291,10 @@ We utilized gemini to help generate a Verplank diagram for better visual explana
 
 https://drive.google.com/file/d/1vNujA6JBeXw9n8Dss075LqJndH7WuRUh/view?usp=sharing
 
+After receiving feedback, we refined our initial clock design by creating a more realistic NYC-inspired day and night skyline. The sun and moon move across the screen over time to represent the progression of the day. In the actual clock, the sun follows the daytime period from approximately 6:00 AM to 6:00 PM, although for the demo we sped up the passage of time so that the full movement could be shown more clearly.
+
+Initially, we planned to use only Button A, which would display the current date and exact time. However, we later decided to make use of Button B as well by adding real-time weather information. To do this, we integrated WeatherAPI and displayed the current temperature together with a weather icon. We created different icons for conditions such as sunny, rainy, cloudy, stormy, and snowy, making the weather information easier to understand at a glance.
+
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
