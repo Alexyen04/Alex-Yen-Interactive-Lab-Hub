@@ -153,6 +153,29 @@ transcription    1.98s \
 real-time factor 0.40x 
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+```
+Transcribing with tiny.en...
+Playing raw data 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+Asked: phone number
+Listening for 6s -- speak your phone number now.
+  transcript: '858-837-9576'
+  digits:     8588379576
+  [6.0s audio, 1.57s to transcribe, logged to /home/pi/Alex-Yen-Interactive-Lab-Hub/Lab 3/speech-scripts/answers.log]
+Playing raw data 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+Asked: zip code
+Listening for 6s -- speak your zip code now.
+  transcript: 'One zero four four'
+  digits:     10044
+  [6.0s audio, 1.63s to transcribe, logged to /home/pi/Alex-Yen-Interactive-Lab-Hub/Lab 3/speech-scripts/answers.log]
+Playing raw data 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+Asked: number of pets
+Listening for 6s -- speak your number of pets now.
+  transcript: '1.'
+  digits:     1
+  [6.0s audio, 4.28s to transcribe, logged to /home/pi/Alex-Yen-Interactive-Lab-Hub/Lab 3/speech-scripts/answers.log]
+Playing raw data 'stdin' : Signed 16 bit Little Endian, Rate 22050 Hz, Mono
+All done. Answers written to /home/pi/Alex-Yen-Interactive-Lab-Hub/Lab 3/speech-scripts/answers.log.
+```
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
