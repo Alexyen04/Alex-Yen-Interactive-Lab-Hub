@@ -108,7 +108,11 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
+Described in greetings.sh
+
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+
+For each of the greetings, even though the greetings are said with the same exact words I think the different tone makes us (user) interpret it differently. The first one (espeak) makes it sound like I am listening to an alien greet me. It sounds monotonic and with no emotion. Surprisingly the second version (festival), it sounds more nice and the speech actually sounds like a person greeting me in a friendly manner. The final greeting through piper sounds the most human but also sounds a the most serious. The impression the piper speech gives is like a professor greeting his students.
 
 ## B. Speech to Text
 
