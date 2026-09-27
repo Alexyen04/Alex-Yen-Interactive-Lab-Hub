@@ -227,9 +227,11 @@ Our idea is to create an **interactive, voice activated recording device** that 
 
 ### Starting the Device
 
-The recording device begins in an **off state**. To interact with the device, the user must first say:
+The recording device begins in an **off state**. The device will say "Welcome to the Voice Activated Recording Device!" Say:
 
 > **"Help settings"**
+
+to get started. 
 
 The device will then verbally explain the available commands and the rules for using them.
 
