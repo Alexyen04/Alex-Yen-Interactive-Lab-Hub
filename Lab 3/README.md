@@ -199,6 +199,8 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
+At 0.2 seconds the system feels very responsive but sometimes too fast. The user may not necessarily be done speaking with that amount of pause and often times might cut off too early. At 1.5 seconds, the pause is sufficient enough to where the user has plenty of time to speak with gaps in between. However, the pause might be so long that user then might feel the interaction is slow and the machine isn't responsive enough. After running multiple tests we discovered that a pause anywhere between 0.7 - 1 seconds is good enough where there is a long enough pause for the user to completely finish their sentence but also fast enough to where the user feels the machine is working up to speed. 
+
 ### The complete loop
 
 `echo_bot.py` puts the pieces together: it listens, endpoints, transcribes, and speaks a reply through Piper. The dialogue policy is deliberately trivial — it repeats what you said — so that everything you notice is a property of the timing rather than the content.
