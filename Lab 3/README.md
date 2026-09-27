@@ -252,8 +252,9 @@ The device supports four main commands:
 ### Command Rules
 
 The device follows a specific set of rules to ensure that commands are used in the correct order:
+Note there will be a 2 second pause in between each interaction between user and device.
 
-* After entering the help settings, the first command must be **"Start recording."**
+* After entering the help settings, the first command must be **"Start recording."** 
 * **"Pause recording"** can only be used while the device is actively recording.
 * **"Play recording"** can only be used when the recording is currently paused.
 * **"End recording"** can only be used while the recording is active.
@@ -264,7 +265,7 @@ After listening to the available commands and rules, the user says **"Start reco
 
 While the recording is active, the user can say **"Pause recording"** to temporarily pause it. To resume, the user says **"Play recording."** This process can be repeated as needed throughout the recording session.
 
-When the user is finished, they say **"End recording."** The device will stop the recording and upload the completed video to the connected computer, where the user can access and watch it.
+When the user is finished, they say **"End recording."** The device will stop the recording and upload the completed video to the connected computer, where the user can access and watch it. The device will say "uploading video" to indicate to the user that the video is processing. 
 
 ## E. Acting out the dialogue
 
