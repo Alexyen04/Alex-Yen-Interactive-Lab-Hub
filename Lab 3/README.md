@@ -221,6 +221,51 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
+## Voice Activated Recording Device
+
+Our idea is to create an **interactive, voice activated recording device** that allows users to control a recording through a set of predefined voice commands.
+
+### Starting the Device
+
+The recording device begins in an **off state**. To interact with the device, the user must first say:
+
+> **"Help settings"**
+
+The device will then verbally explain the available commands and the rules for using them.
+
+### Available Voice Commands
+
+The device supports four main commands:
+
+1. **"Start recording"**  
+   Begins a new recording.
+
+2. **"Pause recording"**  
+   Pauses the current recording.
+
+3. **"Play recording"**  
+   Resumes a paused recording.
+
+4. **"End recording"**  
+   Stops and completes the current recording.
+
+### Command Rules
+
+The device follows a specific set of rules to ensure that commands are used in the correct order:
+
+* After entering the help settings, the first command must be **"Start recording."**
+* **"Pause recording"** can only be used while the device is actively recording.
+* **"Play recording"** can only be used when the recording is currently paused.
+* **"End recording"** can only be used while the recording is active.
+
+### Recording Process
+
+After listening to the available commands and rules, the user says **"Start recording"** to begin.
+
+While the recording is active, the user can say **"Pause recording"** to temporarily pause it. To resume, the user says **"Play recording."** This process can be repeated as needed throughout the recording session.
+
+When the user is finished, they say **"End recording."** The device will stop the recording and upload the completed video to the connected computer, where the user can access and watch it.
+
 ## E. Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
