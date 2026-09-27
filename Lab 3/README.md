@@ -275,6 +275,51 @@ Find a partner, and *without sharing the script with your partner* try out the d
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+## Voice Activated Recording Device Script
+
+**Device:**  
+Welcome to the Voice Activated Recording Device. Say **"Help settings"** to get started.
+
+**User:**  
+Help settings.
+
+**Device:**  
+The available voice commands are **"Start recording," "Pause recording," "Play recording," "End recording," "Camera what are you doing?,"** and **"Help settings."**
+
+To begin, say **"Start recording."**
+
+**User:**  
+Start recording.
+
+**Device:**  
+Starting recording in three, two, one.
+
+**User:**  
+Pause recording.
+
+**Device:**  
+Recording paused.
+
+**User:**  
+Camera, what are you doing?.
+
+**Device:**  
+The recording is currently paused. Say **"Play recording"** to resume.
+
+**User:**  
+Play recording.
+
+**Device:**  
+Playing recording.
+
+**User:**  
+End recording.
+
+**Device:**  
+Recording has ended. Uploading video.
+
+**Device:**  
+Video uploaded successfully. Recording device turning off.
 
 ---
 
