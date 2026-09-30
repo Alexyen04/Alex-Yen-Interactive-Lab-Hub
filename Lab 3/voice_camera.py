@@ -4,8 +4,8 @@
 Run: python voice_camera.py
 Keyboard-only check: python voice_camera.py --no-voice
 Commands (type and Enter, or speak): start recording, pause recording,
-resume recording, end recording, video library, up, down, play, back, help.
-Type quit to exit. Ctrl-C also saves the current session when possible.
+resume recording, end recording, video library, up, down, play video, back,
+help. Type quit to exit. Ctrl-C also saves the current session when possible.
 
 Videos are SILENT. They are streamed to disk at 640x480 / 15 fps / H.264.
 Menus and silent video playback use the ST7789 135x240 PiTFT directly over
@@ -37,8 +37,10 @@ import time
 import uuid
 
 LAB_DIR = Path(__file__).resolve().parent
+ICON_BACKGROUND = "white"
 HELP = ("Commands: start recording, pause recording, resume recording, "
-        "end recording, video library, up, down, play, back. Type quit to exit.")
+        "end recording, video library, up, down, play video, back. "
+        "Type quit to exit.")
 
 
 def stop_process(proc):
@@ -247,6 +249,30 @@ class Screen:
         except OSError:
             self.font = self.title_font = ImageFont.load_default()
         self.last_view = None
+        self.icons = {}
+
+    def icon(self, name):
+        """Load a LAB_DIR picture once, scaled to fit and centered on the PiTFT."""
+        if name in self.icons:
+            return self.icons[name]
+        path = LAB_DIR / name
+        image = None
+        if path.is_file():
+            try:
+                with self.Image.open(path) as opened:
+                    source = opened.convert("RGBA")
+                scale = min(self.width / source.width, self.height / source.height)
+                size = (max(1, round(source.width * scale)),
+                        max(1, round(source.height * scale)))
+                scaled = source.resize(size, self.Image.Resampling.LANCZOS)
+                canvas = self.Image.new("RGB", (self.width, self.height), ICON_BACKGROUND)
+                canvas.paste(scaled, ((self.width - size[0]) // 2,
+                                      (self.height - size[1]) // 2), scaled)
+                image = canvas
+            except Exception as exc:
+                print(f"Screen image {name} unusable: {exc}", flush=True)
+        self.icons[name] = image
+        return image
 
     def poll_buttons(self):
         now = time.monotonic()
@@ -278,6 +304,11 @@ class Screen:
                 pass
             self.last_view = None
             return
+        icon = self.icon(app.icon) if app.icon else None
+        if icon is not None:
+            self.disp.image(icon)
+            self.last_view = None
+            return
         elapsed = int(time.monotonic() - app.recorder.started) if app.recorder.session else 0
         view = (app.mode, app.voice_phase, app.message, elapsed,
                 tuple(p.name for p in app.files), app.selected)
@@ -305,7 +336,7 @@ class Screen:
                 draw.text((5, y + 4), self.fit(draw, text, self.font, self.width - 10),
                           fill="#101820" if selected else "white", font=self.font)
             draw.text((5, self.height - 40), "Buttons: up / down", fill="white", font=self.font)
-            draw.text((5, self.height - 24), 'Say "play" or "back"', fill="white", font=self.font)
+            draw.text((5, self.height - 24), 'Say "play video" or "back"', fill="white", font=self.font)
         else:
             if app.recorder.session:
                 draw.text((5, 50), f"Session: {elapsed // 60:02d}:{elapsed % 60:02d}",
@@ -416,6 +447,7 @@ class App:
         self.selected = 0
         self.player = None
         self.monitor_failed = False
+        self.icon = None
         self.message = 'Say "start recording" or "video library".'
         self.voice_phase = "Keyboard controller" if args.no_voice else "Loading voice model"
         self.screen = None if args.no_screen else Screen(args)
@@ -472,7 +504,8 @@ class App:
         cmd = {"start": "start recording", "pause": "pause recording",
                "resume": "resume recording", "end": "end recording",
                "stop recording": "end recording", "library": "video library",
-               "play recording": "play", "help settings": "help"}.get(cmd, cmd)
+               "play": "play video", "play recording": "resume recording",
+               "help settings": "help"}.get(cmd, cmd)
         print(f"{source}: {text}", flush=True)
         before = self.mode
         outcome = "accepted"
@@ -488,32 +521,37 @@ class App:
                 self.recorder.start_segment()
                 self.monitor_failed = False
                 self.mode = "recording"
+                self.icon = "record.webp"
                 self.say("Recording started.")
             elif cmd == "pause recording" and self.mode == "recording":
                 self.recorder.stop_segment()
                 self.mode = "paused"
+                self.icon = "pause_button.png"
                 self.say("Recording paused.")
             elif cmd == "resume recording" and self.mode == "paused":
                 self.recorder.start_segment()
                 self.monitor_failed = False
                 self.mode = "recording"
+                self.icon = "record.webp"
                 self.say("Recording resumed.")
             elif cmd == "end recording" and self.mode in ("recording", "paused"):
                 path = self.recorder.finish()
                 self.mode = "ready"
                 self.monitor_failed = False
+                self.icon = None
                 print(f"Saved file: {path}", flush=True)
                 self.say("Video saved. Say video library to watch it.")
             elif cmd == "video library" and self.mode in ("ready", "library"):
                 self.stop_player()
                 self.mode = "library"
-                self.say("Video library. Use up and down, then play.")
+                self.icon = None
+                self.say("Video library. Use up and down, then play video.")
                 self.show_library()
             elif cmd in ("up", "down") and self.mode == "library":
                 self.selected = max(0, min(self.selected + (1 if cmd == "down" else -1),
                                            len(self.files) - 1))
                 self.show_library()
-            elif cmd == "play" and self.mode == "library" and self.files:
+            elif cmd == "play video" and self.mode == "library" and self.files:
                 if self.screen is None:
                     self.say("Playback needs the PiTFT. Relaunch without no screen.")
                     print(f"Selected file: {self.files[self.selected]}", flush=True)
@@ -527,6 +565,7 @@ class App:
                 was_playing = self.mode == "playing"
                 self.stop_player()
                 self.mode = "library" if was_playing else "ready"
+                self.icon = None
                 self.say("Video library." if was_playing else "Ready.")
                 if was_playing:
                     self.show_library()
@@ -534,11 +573,12 @@ class App:
                 outcome = "unavailable"
                 self.say("Command unavailable here. " +
                          ("End recording before opening the library." if
-                          self.mode in ("recording", "paused") else "Say help for commands."))
+                          self.mode in ("recording", "paused") else "Say help settings for commands."))
         except Exception as exc:
             self.monitor_failed = True
             if self.recorder.session and self.recorder.proc is None:
                 self.mode = "paused"
+                self.icon = "pause_button.png"
             self.say(f"Error: {exc}")
             outcome = "error"
         entry = {"time_utc": datetime.now(timezone.utc).isoformat(), "source": source,
@@ -630,7 +670,7 @@ def main():
     parser.add_argument("--playback-fps", type=int, default=10)
     parser.add_argument("--camera", default="/dev/video0")
     parser.add_argument("--videos", type=Path, default=LAB_DIR / "videos")
-    parser.add_argument("--model", default="tiny.en")
+    parser.add_argument("--model", default="base.en")
     parser.add_argument("--vad-model", type=Path,
                         default=LAB_DIR / "models" / "silero_vad.onnx")
     parser.add_argument("--min-silence", type=float, default=0.5)
