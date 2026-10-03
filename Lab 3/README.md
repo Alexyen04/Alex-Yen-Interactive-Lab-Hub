@@ -1,6 +1,8 @@
 # Chatterboxes
 
 **Alexander Yen and Viktor Radev**
+
+<details>
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
 In this lab, we want you to design interaction with a speech-enabled device — something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1). First, we want you to storyboard what you imagine the conversational interaction to be like. Then you will use wizarding techniques to elicit examples of what people might say, ask, or respond. We then want you to use the examples collected from at least two other people to inform the redesign of the device.
@@ -34,11 +36,11 @@ pi@ixe00:~/Interactive-Lab-Hub $ git push
 Option 2: On your own GitHub repo, create a pull request to get updates from the class Interactive-Lab-Hub. After you have the latest updates online, go to your Pi, `cd` to your `Interactive-Lab-Hub` and use `git pull`.
 
 ---
-
+</details>
 # Part 1
 
 ## Setup
-
+<details>
 Create and activate a virtual environment for this lab:
 
 ```
@@ -68,7 +70,7 @@ Then run the setup script, which installs the classic speech synthesizers, downl
 ```
 
 Check your audio devices before going further. `arecord -l` lists capture devices and `aplay -l` lists playback devices; if your webcam microphone or Bluetooth speaker does not appear, fix that first — every script below assumes the system defaults are the ones you want.
-
+</details>
 ## A. Text to Speech
 
 Your Pi can speak in several quite different ways, and the differences are audible in a way that matters for design. In `speech-scripts/` there are shell scripts for each.
