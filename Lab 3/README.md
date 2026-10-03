@@ -363,16 +363,17 @@ David Zhang: The system is cool and video recording works well. In the beginning
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+The whole idea for the system, including the play/pause/record aspect worked as intended. When the user said certain commands, the machine would appropriately follow them and execute the proper interaction. One thing that could be improved is to use a different model for parsing the speech from the user. Sometimes the model would not interpret the speech very well and would get the wrong text. As a result, the user would often times have to mention the same command multiple times, causing a big inconvenience. 
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+For the controller, it was especially convenient for users who didn't want to use the voice to text functionality. It allowed users to directly input their commands into the terminal and operate the system through that method. However, one downside of this would be that if there were any typos in the command the user would often need to retype the commands again. Overall the controller provided very good information for the user that wasn't displayed in the system. Especially for the help settings commands or even seeing what the system parsed when using voice recognition, it gave the user a visual way to see these aspects. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+The biggest lesson I take away from this WoZ interaction is that I should keep the amount of commands a lot of more concise and limited. The more complex the command the harder it is for the user to know what to say and to remember all the commands. For this interaction specifically there were many commands which made it difficult for users to know what to say once they reached the end of the recording process. There are many ways to say the same meaning in english which also makes its difficult for users to say a command if they forgot. For example, to pause a video you could say "pause recording", "pause", or "pause video". Overall, designing a more autonomous version of this system just requires less commands to give the user a more guided experience where they do not need to remember each step. 
+
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
+During user interactions, we could record and save certain commands that users say to capture the more typical phrases. After then we can reduce the amount of commands and just focus on commands that are high use. In addition, we could also save how long the user takes a pause in between each voice interaction to better modify how much pause time there should be within each interaction. Some other sensing modalities that would make sense to capture would be physical touch interactions with the buttons. Often times users would like to be able to control the system through buttons.
 
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
