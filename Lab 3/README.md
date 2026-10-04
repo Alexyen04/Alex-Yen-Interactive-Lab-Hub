@@ -433,6 +433,8 @@ David Zhang: The system is cool and video recording works well. In the beginning
 
 Allen Lu: The system worked well overall and the recording features were easy to use once I understood the commands. At first, I was unsure what I was supposed to say because there were several different voice commands to remember. The voice recognition also occasionally misunderstood what I said, so I had to repeat certain commands. The screen helped show the current state of the system, but the text was small and there was too much information displayed at once. Using larger text and showing only the commands that are currently available would make the system easier to follow.
 
+Jovian Wang, https://github.com/jovianw/Interactive-Lab-Hub/tree/Fall2026/Lab%203 - Very cool and functional application of speech recognition and audio! Small feedback: it should be more clear what the commands are. Is it "pause recording", or is it "Camera, pause", where the device recognizes that keyword "camera"? This wasn't clear in the acted out dialogue and definitely something to think more about. Overall, great idea!
+
 <details>
 <summary>Instructions</summary>
 
