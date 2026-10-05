@@ -427,6 +427,10 @@ Try to get at least two people to interact with your system. (Ideally, you would
 
 </details>
 
+https://drive.google.com/file/d/1rP8K2TndhjYdRvTKlUhbs-89dNNlEU92/view?usp=sharing
+
+
+
 Feedback:
 
 David Zhang: The system is cool and video recording works well. In the beginning its difficult to know which commands to say and unclear where to start. Sometimes the voice recognition system wasn't that good and didn't parse the speech probably. The screen was displaying lots of text but it was difficult to see because it was very small and hard to keep track of the commands. 
