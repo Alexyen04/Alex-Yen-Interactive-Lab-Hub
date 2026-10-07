@@ -286,6 +286,8 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
 
+OCD Food Sorter, Food Dispenser, Magnetic Claw Machine Idea, Auto Drink Mixer, Revolving Sushi Dispenser, 
+
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
