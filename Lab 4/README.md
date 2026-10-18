@@ -377,6 +377,7 @@ You may need to adjust `CUP_THRESHOLD` in [`windmill_coaster.py`](windmill_coast
 
 Use this example as a starting point. Change the sensor, movement, physical form, or dining interaction to create your own Feast Automata variation.
 
+<details>
 #### Optional Extensions
 
 The following examples are optional resources if you want to add more inputs or outputs to your prototype.
@@ -497,7 +498,7 @@ This is a playful way to visualize how the expander works, but the same techniqu
 ---
 
 ---
-
+</details>
 ### Part F
 
 ### Final Documentation
