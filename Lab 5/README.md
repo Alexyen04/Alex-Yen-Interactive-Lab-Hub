@@ -240,7 +240,6 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
 
-<details>
 ``` 	
 python ask_qwen.py "Whose the best nba player of all time"
 The NBA's best player of all time is generally considered to be LeBron James, who holds the record for 30 consecutive seasons with the most points and 18 titles.
@@ -258,8 +257,6 @@ The current best player in the NBA is LeBron James, who has won multiple champio
 
 [qwen3.5:0.8b, 5.5 s]
 ```
-
-</details>
 
 
 ## Part E. 
