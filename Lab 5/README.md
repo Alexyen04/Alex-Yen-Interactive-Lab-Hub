@@ -164,6 +164,19 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
 
+One person facing front: person at x=130, height=476 px, conf=0.92 | 1 object(s)
+One person facing side: person at x=302, height=479 px, conf=0.90 | 1 object(s)
+One person facing back: person at x=37, height=116 px, conf=0.75 | 1 object(s)
+No person: 0 object(s)
+Two person in picture: person at x=312, height=470 px, conf=0.74 | person at x=569, height=215 px, conf=0.42 | 2 object(s)
+
+If I stood way to far away or put my face directly in front of the camera it had a difficult time detecting a person. If the picture I presented the camera had too many figures and were super small it also struggled to identify the correct amount of people.
+
+
+
+https://github.com/user-attachments/assets/e9d84d0a-b3de-407d-a46c-f10b60a1aedd
+
+
 
 
 ## Part C. 
