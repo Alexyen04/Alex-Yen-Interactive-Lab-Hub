@@ -247,6 +247,7 @@ The NBA's best player of all time is generally considered to be LeBron James, wh
 [qwen3.5:0.8b, 9.4 s]
 
 
+python ask_qwen.py "Why is lebron james the GOAT"
 LeBron James holds the title of GOAT because he has been the undisputed king of basketball for over 20 years, dominating championships and inspiring millions through his incredible career.
 
 [qwen3.5:0.8b, 9.3 s]
