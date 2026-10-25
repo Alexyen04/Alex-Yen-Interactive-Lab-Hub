@@ -204,6 +204,8 @@ Try the two main features of this script: 1) pinching for percentage control (th
 Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
+<img width="452" height="389" alt="image" src="https://github.com/user-attachments/assets/1f1fb3ce-8bfb-4b2d-b109-74773ec3ac5e" />
+I could use body pose tracking to create an interactive system that responds to a person's position and movements in front of the camera. For example, the system could detect whether someone moves left or right and use that information to control an object on a screen or trigger different actions. By tracking the position of different body parts, such as the hands or arms, the system could also recognize simple gestures like raising a hand to activate something. This would allow users to interact with the system through natural movements without needing physical buttons or controllers.
 
 
 ## Part D. 
