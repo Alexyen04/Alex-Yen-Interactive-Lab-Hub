@@ -336,6 +336,7 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
 
 \*\*\***Describe the interaction before.**\*\*\*
+Person A will verbally say to the device to begin watching / observing the tram. The device recognizes this action and beings to record / monitor the movements of the tram. It then will predict the movements of the tram and how long it will take to arrive back at roosevelt island. Afterwards the device will send a message indicating the timings of the tram, telling Person B through their device that the tram is coming soon or has arrived.
 
 ## Part H. 
 ### Incorporate the observant system
@@ -369,6 +370,148 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * "Looks like": how the device sits in the room at night, and what it looks like at bedtime and in the morning.
 * "Works like": the pipeline from detector to interpreter to log to reasoner, with a real night's data.
 * "Acts like": how a person hands the night over and what they get back.
+
+
+# Roosevelt Island Tram Observation System
+
+## 1. Prototypes and Iterations
+
+Our project focuses on creating an observation system that uses a Raspberry Pi and camera to monitor the Roosevelt Island Tram and predict when it will arrive back at Roosevelt Island. The goal is to allow one person to activate the system and automatically notify another person when the tram is approaching or has arrived.
+
+Our design consists of several components that we are developing and integrating:
+
+1. **Camera Detection:** We use a Raspberry Pi connected to a camera positioned toward the tram. The camera captures the tram's movement, while an object detection model identifies the tram within the camera's view.
+
+2. **Voice Activation:** We are incorporating voice recognition so Person A can verbally instruct the device to begin observing the tram. This allows the system to start monitoring without requiring physical interaction.
+
+3. **Movement Tracking and Prediction:** Once the tram is detected, the system tracks its position and movement over time. We plan to use these observations to estimate how long it will take for the tram to return to Roosevelt Island.
+
+4. **Notification System:** The final component communicates the predicted tram arrival time to Person B through a message or notification on their device.
+
+As we iterate, our main focus is improving the accuracy of the camera detection, connecting voice commands to the observation pipeline, and making the predicted arrival times useful for Person B.
+
+## 2. Looks Like: Physical Appearance and Placement
+
+Our device has a relatively simple physical design. It consists of a Raspberry Pi connected to a camera, placed near a window with a clear view of the Roosevelt Island Tram.
+
+**At Night:**
+
+The Raspberry Pi remains positioned near the window, with the camera facing the tram's route. The device does not require a large display or complicated physical controls because most interactions happen through voice commands and notifications.
+
+When Person A is ready to begin monitoring, they can verbally activate the device. The camera then begins observing the tram's movements.
+
+**At Bedtime:**
+
+The device operates in the background without requiring Person A to constantly check the camera or manually track the tram. Once activated, the Raspberry Pi handles detection and tracking automatically.
+
+**In the Morning:**
+
+The device remains in the same physical location. Person A can stop the observation session, and the system can provide a summary of the tram movements and arrival predictions recorded during the session.
+
+Overall, we want the device to blend into the room and function as an unobtrusive monitoring system.
+
+## 3. Works Like: Detector → Interpreter → Log → Reasoner
+
+Our system follows a pipeline that transforms camera observations into useful arrival predictions and notifications.
+
+**Step 1: Detector**
+
+The Raspberry Pi camera captures images of the tram route. An object detection model processes these images and identifies when the tram appears in the camera's field of view.
+
+The detector provides information such as the tram's position within the image and the confidence of the detection.
+
+**Step 2: Interpreter**
+
+The interpreter examines the tram's position across multiple frames to determine its direction of movement.
+
+For example, by comparing the tram's position over time, the system can estimate whether it is traveling toward Roosevelt Island or moving away from it.
+
+This allows us to translate individual detections into meaningful movement events.
+
+**Step 3: Log**
+
+The system records observations into a log containing timestamps and information about the tram's movements.
+
+Each entry may include:
+
+* Time of detection
+* Position of the tram
+* Estimated direction of travel
+* Detection confidence
+* Predicted arrival time
+
+This information allows us to examine patterns in the tram's movement and compare predictions against observed arrivals.
+
+**Step 4: Reasoner**
+
+The reasoner uses the recorded movement information to estimate when the tram will return to Roosevelt Island.
+
+For example, if the system observes the tram moving away from Roosevelt Island, it can use previous trip durations and movement patterns to estimate its return time.
+
+As additional observations become available, the prediction can be updated to reflect the tram's current position.
+
+Once the tram is approaching or has arrived, the system sends a notification to Person B.
+
+**Nighttime Data Collection:**
+
+For our actual observation session, we will document the following information:
+
+| Timestamp | Detected Movement | System Response |
+|---|---|---|
+| [Actual time] | Tram first detected | Begin tracking |
+| [Actual time] | Tram moving away | Estimate return time |
+| [Actual time] | Tram returning | Update arrival prediction |
+| [Actual time] | Tram reaches Roosevelt Island | Notify Person B |
+
+We can then compare the predicted arrival time against the observed arrival time to evaluate how accurately our system performs.
+
+## 4. Acts Like: User Interaction and Experience
+
+Our system is designed to require very little interaction from either person.
+
+**Person A: Starting the Observation**
+
+When Person A wants the device to begin monitoring, they give a voice command such as:
+
+"Start observing the tram."
+
+The device recognizes the command and activates the observation pipeline. From this point onward, the system automatically monitors the tram without requiring Person A to continuously interact with it.
+
+**System: Monitoring and Predicting**
+
+As the camera observes the tram, the system detects its position, interprets its movements, and predicts when it will return to Roosevelt Island.
+
+If the tram is moving away, the system estimates when it may return. When the tram starts approaching, the system updates its prediction.
+
+**Person B: Receiving Notifications**
+
+Person B receives useful information directly through their device.
+
+Example notifications include:
+
+* "The tram is expected to arrive at Roosevelt Island in approximately 3 minutes."
+* "The tram is approaching Roosevelt Island."
+* "The tram has arrived at Roosevelt Island."
+
+These notifications help Person B decide when to prepare to leave or head toward the tram station without having to manually check its location.
+
+**Ending the Observation**
+
+When the observation session is no longer needed, Person A can give another voice command:
+
+"Stop observing the tram."
+
+The device ends the monitoring session and preserves the relevant observation data for later review.
+
+## 5. Reflection and Next Iterations
+
+Our main objective is to create a system that transforms continuous visual observations into useful information for another person.
+
+One challenge is ensuring the camera can consistently detect the tram under different lighting conditions, especially at night. Another challenge is accurately estimating arrival times from visual movement alone.
+
+For future iterations, we want to improve the reliability of our movement predictions, evaluate the accuracy of the estimated arrival times, and refine the notification system so Person B only receives relevant updates.
+
+Ultimately, our goal is to create a simple, hands free observation system where Person A initiates the monitoring process and Person B benefits from the information collected without needing to interact with the camera directly.
 
 \*\*\***Include a short video of the whole system**\*\*\*
 
