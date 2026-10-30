@@ -458,10 +458,10 @@ For our actual observation session, we will document the following information:
 
 | Timestamp | Detected Movement | System Response |
 |---|---|---|
-| [Actual time] | Tram first detected | Begin tracking |
-| [Actual time] | Tram moving away | Estimate return time |
-| [Actual time] | Tram returning | Update arrival prediction |
-| [Actual time] | Tram reaches Roosevelt Island | Notify Person B |
+| time | Tram first detected | Begin tracking |
+| time | Tram moving away | Estimate return time |
+| time | Tram returning | Update arrival prediction |
+| time | Tram reaches Roosevelt Island | Notify Person B |
 
 We can then compare the predicted arrival time against the observed arrival time to evaluate how accurately our system performs.
 
